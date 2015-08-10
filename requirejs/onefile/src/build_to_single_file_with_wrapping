@@ -1,0 +1,3 @@
+../node_modules/.bin/r.js -o out=../dist/app.js name=main mainConfigFile=main.js paths.requireLib=../bower_components/almond/almond include=requireLib wrap=true optimize=none
+
+# use excludeShallow to prevent some module being included in the output file

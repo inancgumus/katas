@@ -1,0 +1,21 @@
+<!--
+Using Require.js we define a single entry point on our index page. We should setup any useful containers that might be used by our Backbone views.
+
+Note: The data-main attribute on our single script tag tells Require.js to load the script located at "js/main.js". It automatically appends the ".js"
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Index - src/main Loader</title>
+    <script data-main="src/main" src="bower_components/requirejs/require.js"></script>
+</head>
+<body>
+
+<div id="container">
+  <div id="menu"></div>
+  <div id="content"></div>
+</div>
+
+</body>
+</html>

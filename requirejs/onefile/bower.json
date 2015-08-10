@@ -1,0 +1,19 @@
+{
+  "name": "onefile",
+  "version": "0.0.0",
+  "homepage": "https://github.com/deeperx/experiments",
+  "authors": [
+    "deeperx <inanc@pixenka.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20"
+  }
+}

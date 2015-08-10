@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backbone example</title>
+</head>
+<body>
+
+<script type="text/javascript" src="bower_components/requirejs/require.js"></script>
+
+<script type="text/javascript">
+require.config({
+  paths: {
+    jquery: 'bower_components/jquery/dist/jquery',
+    underscore: 'bower_components/underscore/underscore',
+    backbone: 'bower_components/backbone/backbone',
+    text: 'bower_components/requirejs-text/text'
+  }
+});
+
+require([
+  'views/list',
+  'models/list',
+  'models/item'
+], function(ListView, List, Item) {
+
+  var list = new List();
+  var listView = new ListView({
+    el: '#list',
+    collection: list
+  });
+
+  list.add(new Item());
+  list.add(new Item());
+
+  $('#add').on('click', function() {
+    list.add(new Item());
+  });
+});
+</script>
+
+<button id="add">Add list item</button>
+<ul id='list'>
+</ul>
+
+</body>
+</html>

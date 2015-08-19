@@ -1,0 +1,21 @@
+{
+  "name": "mocha-jsdom-x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jsdom": "^6.1.0",
+    "mocha-jsdom": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "jsdom": "^6.1.0",
+    "mocha": "^2.2.5",
+    "mocha-jsdom": "^1.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}

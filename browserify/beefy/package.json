@@ -1,0 +1,21 @@
+{
+  "name": "beefyx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "beefy": "^2.1.5",
+    "browserify": "^11.0.1",
+    "coffeeify": "^1.1.0",
+    "watchify": "^3.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+
+    "serve": "beefy main.coffee:main.js --live -- -t coffeeify --extension=\".coffee\"",
+    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

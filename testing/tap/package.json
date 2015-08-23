@@ -1,0 +1,16 @@
+{
+  "name": "tapx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "coffeetape *.coffee | tap-spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffeetape": "^1.0.1",
+    "faucet": "0.0.1",
+    "tape": "^4.2.0"
+  }
+}

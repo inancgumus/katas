@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>To Do</h1>
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="lib/backbone/backbone-min.js"></script>
+    
+    <script src="lib/sinon-1.16.1/index.js"></script>
+
+		<script src="src/app-todos.js"></script>
+
+		<script>
+			$(function () {
+				// fake the api
+				this.ajaxStub = sinon.stub($, "ajax").yieldsTo("success", [
+					{ id: 1, title: "Todo 1", complete: false },
+				  { id: 2, title: "Todo 2", complete: true  },
+				  { id: 3, title: "Todo 3", complete: false  }
+				]);
+
+				var todos = new todoApp.Todos();
+				todos.fetch();
+
+				var list = new todoApp.TodosList({collection: todos});
+				$("body").append(list.render().el);
+			});
+		</script>
+	</body>
+</html>

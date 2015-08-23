@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>List of Todos</h1>
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="lib/backbone/backbone-min.js"></script>
+    <script src="src/app-todos.js"></script>
+    <script>
+      $(function () {
+        var todos = new todoApp.Todos();
+        todos.fetch();
+
+        var list = new todoApp.TodosList({collection: todos});
+        $("body").append(list.el);
+      })
+    </script>
+  </body>
+</html>

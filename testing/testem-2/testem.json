@@ -1,0 +1,17 @@
+{
+  "framework": "mocha",
+  "src_files": [
+    "lib/jquery/dist/jquery.min.js",
+    "lib/underscore/underscore-min.js",
+    "lib/backbone/backbone-min.js",
+    "src/*.js",
+    "lib/chai/chai.js",
+    "lib/sinon-1.16.1/index.js",
+    "lib/sinon-chai/lib/sinon-chai.js",
+    "test/*.js"
+  ],
+  "phantomjs_debug_port": 3001,
+  "launch_in_dev": [
+    "phantomjs"
+  ]
+}

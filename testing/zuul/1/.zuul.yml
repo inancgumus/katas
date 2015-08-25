@@ -1,0 +1,4 @@
+ui: mocha-qunit
+browsers:
+  - name: ie
+    version: latest

@@ -1,0 +1,17 @@
+{
+  "name": "transformerx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browserify app.coffee -t coffeeify -t ./transformer.js --extension '.coffee' -o dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffeeify": "^1.1.0",
+    "jquery": "^2.1.4",
+    "through2": "^2.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "mocha-backbone-testing",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"run under the /test directory\" && exit 1"
+  },
+  "author": "inanc gumus",
+  "license": "ISC"
+}

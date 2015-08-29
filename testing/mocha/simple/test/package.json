@@ -1,0 +1,15 @@
+{
+  "name": "mocha-backbone-testing",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha . --growl --compilers coffee:coffee-script/register --recursive",
+    "watch": "mocha . --growl --compilers coffee:coffee-script/register --recursive -w"
+  },
+  "author": "inanc gumus",
+  "license": "ISC"
+}

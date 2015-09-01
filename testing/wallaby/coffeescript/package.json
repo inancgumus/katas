@@ -1,0 +1,25 @@
+{
+  "name": "wallaby-coffeescript-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wallaby-node.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wallabyjs/wallaby-coffeescript-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallabyjs/wallaby-coffeescript-sample/issues"
+  },
+  "homepage": "https://github.com/wallabyjs/wallaby-coffeescript-sample",
+  "devDependencies": {
+    "chai": "^2.2.0"
+  }
+}

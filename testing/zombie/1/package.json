@@ -1,0 +1,17 @@
+{
+  "name": "zombiex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "coffee-script": "^1.10.0",
+    "mocha": "^2.3.1",
+    "zombie": "^4.1.0"
+  }
+}

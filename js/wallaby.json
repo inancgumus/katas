@@ -1,0 +1,14 @@
+{
+  "env": {
+    "type": "node"
+  },
+
+  "files": [
+    "*.coffee",
+    "!*_test.coffee"
+  ],
+
+  "tests": [
+    "*_test.coffee"
+  ]
+}

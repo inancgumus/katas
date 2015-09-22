@@ -2,7 +2,7 @@ Vector location;
 Vector velocity;
 
 void setup() {
-  size(640, 480, P3D);
+  size(640, 480);
   frameRate(60);
   surface.setResizable(true);
   clear();

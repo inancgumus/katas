@@ -1,10 +1,10 @@
 int       boxSize, boxRadian;
 
-int       ballSize     = 35;
+int       ballSize     = 50;
 boolean   bounced      = false;
 
 Vector3D  ballLoc      = new Vector3D();
-Vector3D  ballVelocity = new Vector3D(5, 6, 7);
+Vector3D  ballVelocity = new Vector3D(5, 10, 15);
 
 Vector3D  boxLoc       = new Vector3D(-width * QUARTER_PI, height * QUARTER_PI, QUARTER_PI / 4);
 Vector3D  boxVelocity  = new Vector3D(0.0005, 0.0005, 0.001);
@@ -71,8 +71,10 @@ void drawBall() {
   
   fill(255, 255, 0);
   noStroke();
-  lights();
-  
+    
+  directionalLight(255, 255, 255, ballLoc.x, ballLoc.y, ballLoc.z);
+  ambientLight(0, 0, 0, ballVelocity.x, ballVelocity.y, ballVelocity.z);
+
   sphere(ballSize);
 }
 

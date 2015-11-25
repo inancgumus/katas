@@ -1,0 +1,98 @@
+/* line 1, slides.sass */
+.slides {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 6, slides.sass */
+.slide {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding: 50px 200px;
+  font-size: 50px;
+}
+
+/* line 13, slides.sass */
+h1, .h1 {
+  line-height: 1.3em;
+  letter-spacing: -1px;
+  margin-bottom: 0.5em;
+}
+
+/* line 18, slides.sass */
+h1.x-large {
+  text-align: left;
+  font-size: 50px;
+}
+
+/* line 22, slides.sass */
+h1.large {
+  font-size: 60px;
+}
+
+/* line 25, slides.sass */
+h1.normal {
+  font-size: 100px;
+}
+
+/* line 29, slides.sass */
+.bullets ul {
+  padding-left: 0;
+}
+
+/* line 32, slides.sass */
+.bullets li {
+  text-align: left;
+  line-height: 1.6em;
+}
+
+/* line 38, slides.sass */
+.image img {
+  max-width: 100%;
+  padding: 2px;
+}
+
+/* line 44, slides.sass */
+.quote blockquote {
+  display: inline-block;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* line 50, slides.sass */
+.quote blockquote::after,
+.quote blockquote::before {
+  content: '"';
+  font-weight: bold;
+  color: #666;
+}
+
+/* line 56, slides.sass */
+.quote blockquote::before {
+  margin-left: -15px;
+}
+
+/* line 59, slides.sass */
+.quote cite {
+  float: right;
+  color: #666;
+}
+
+/* line 63, slides.sass */
+.quote cite::before {
+  content: "- ";
+}
+
+/* line 68, slides.sass */
+pre.prettyprint {
+  text-align: left;
+  font-size: 18px;
+  font-family: monospace;
+  margin-top: 1em;
+  padding: 20px;
+  max-height: 500px;
+  overflow-y: scroll;
+}

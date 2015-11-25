@@ -1,0 +1,4 @@
+(function() {
+  var publisherId = '34234-3423-423432f-dsfdsa';
+  pixi.init();
+})();

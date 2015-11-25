@@ -1,0 +1,75 @@
+.slides
+  display: table
+  height: 100%
+  width: 100%
+
+.slide
+  display: table-cell
+  vertical-align: middle
+  position: relative
+  padding: 50px 200px
+  font-size: 50px
+
+h1, .h1
+  line-height: 1.3em
+  letter-spacing: -1px
+  margin-bottom: .5em
+
+h1.x-large
+  text-align: left
+  font-size: 50px
+
+h1.large
+  font-size: 60px
+
+h1.normal
+  font-size: 100px
+
+// Bullets
+.bullets ul
+  padding-left: 0
+
+.bullets li
+  text-align: left
+  line-height: 1.6em
+
+
+// Images
+.image img
+  max-width: 100%
+  padding: 2px
+
+
+// Quotes
+.quote blockquote
+  display: inline-block
+  font-style: italic
+  text-align: left
+  margin-bottom: 0
+
+.quote blockquote::after,
+.quote blockquote::before
+  content: '\"'
+  font-weight: bold
+  color: #666
+
+.quote blockquote::before
+  margin-left: -15px
+
+.quote cite
+  float: right
+  color: #666
+
+.quote cite::before
+  content: '- '
+
+
+// Snippets
+pre.prettyprint
+  text-align: left
+  font-size: 18px
+  font-family: monospace
+  margin-top: 1em
+  padding: 20px
+  max-height: 500px
+  overflow-y: scroll

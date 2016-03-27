@@ -14,14 +14,16 @@ module.exports = function(config) {
       'karma-coverage'
     ],
     preprocessors: {
-      'src/**/*.js': ['coverage']
+      '**/src/**/*.js': ['coverage']
     },
-    browsers: ['PhantomJS', 'Chrome'],
+    browsers: ['PhantomJS'/*, 'Chrome'*/],
     frameworks: ['mocha', 'chai'],
-    reporters: ['progress', 'coverage'],
+    reporters: ['mocha', 'coverage'],
     coverageReporter: {
       type: 'lcov',
-      dir: 'coverage/'
+      dir: 'coverage/',
+      subdir: '.',       // prevent putting covs into browser directories
+      includeAllSources: true
     },
 
     logLevel: config.LOG_INFO,

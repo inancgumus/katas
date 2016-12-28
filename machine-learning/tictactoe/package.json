@@ -1,0 +1,15 @@
+{
+  "name": "tictactoe-neural-network",
+  "version": "1.0.0",
+  "description": "a basic neural network to play tic tac toe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "inanc gumus",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0"
+  }
+}

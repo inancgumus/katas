@@ -1,0 +1,31 @@
+import tensorflow as tf
+
+session = tf.InteractiveSession()
+
+x = tf.constant([[2., 3]])
+y = tf.constant([[2., 3.]])
+neg_x = tf.neg(x)
+add_x = tf.add(x, y)
+sub_x = tf.sub(x, y)
+mul_x = tf.mul(x, y)
+div_x = tf.div(x, y)
+divf_x= tf.truediv(x, y)
+flor_x= tf.floordiv(x, y)
+mod_x = tf.mod(x, y)
+pow_x = tf.pow(x, y)
+exp_x = tf.exp(x) # => same as: pow(e, x) # e is euler's number
+sqrt_x= tf.sqrt(x) # => same as: pow(x, 0.5)
+
+print("original xs     :", x.eval())
+print("original ys:    :", y.eval())
+print("original neg_x  :", neg_x.eval())
+print("original add_x  :", add_x.eval())
+print("original sub_x  :", sub_x.eval())
+print("original mul_x  :", mul_x.eval())
+print("original div_x  :", div_x.eval())
+print("original divf_x :", divf_x.eval())
+print("original flor_x :", flor_x.eval())
+print("original mod_x  :", mod_x.eval())
+print("original pow_x  :", pow_x.eval())
+print("original exp_x  :", exp_x.eval())
+print("original sqrt_x :", sqrt_x.eval())

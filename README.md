@@ -1,17 +1,9 @@
-# TODO
+# Experimental Projects
 
-## experiment with otherbuild tools for building js
+These projects are completely experimental.
 
-### unix makefile
+I'm trying to experiment with awesome technologies (_especially new ones_) to
+advance my knowledge. Mostly are the basics of the technologies. But, the
+important thing is that they're fuck'n working. So, can be used as a boilerplate.
 
-  * **it looks simpler than other build tools like grunt**
-  * **read more:** https://algorithms.rdio.com/post/make/
-  * **read more:** http://mntr.dk/2014/i-love-the-unix-philisophy-but/
-  * **read more:** https://www.thumbtack.com/engineering/makefiles-for-less-and-css/_
-  * **read more:** http://oxy.fi/2013/02/03/how-to-use-makefiles-in-your-web-projects/_
-  * **example:** https://github.com/jcoglan/bake/blob/master/Makefile
-
-### npm
-
-  * **read more:** http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
-  * **example:** https://github.com/keithamus/npm-scripts-example
+TODO: Put index to the directory/project internals here and descriptions.

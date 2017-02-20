@@ -1,0 +1,107 @@
+exports[`test renders correctly 1`] = `
+<form>
+  <p>
+    <span
+      style={
+        Object {
+          "marginRight": 10,
+          "textTransform": "capitalize",
+        }
+      }>
+      Your name
+      :
+    </span>
+    <input
+      name="name"
+      type="text" />
+  </p>
+  <p>
+    <span
+      style={
+        Object {
+          "marginRight": 10,
+          "textTransform": "capitalize",
+        }
+      }>
+      Your lastname
+      :
+    </span>
+    <input
+      name="lastname"
+      type="text" />
+  </p>
+  <p>
+    <span
+      style={
+        Object {
+          "marginRight": 10,
+          "textTransform": "capitalize",
+        }
+      }>
+      Your email
+      :
+    </span>
+    <input
+      name="email"
+      type="text" />
+  </p>
+</form>
+`;
+
+exports[`undefined 1`] = `
+<form
+  onChange={[Function]}
+  onSubmit={[Function]}>
+  <p>
+    <label
+      style={
+        Object {
+          "marginRight": 10,
+          "textTransform": "capitalize",
+        }
+      }>
+      Your name
+      :
+    </label>
+    <input
+      defaultValue=""
+      name="name"
+      type="text" />
+  </p>
+  <p>
+    <label
+      style={
+        Object {
+          "marginRight": 10,
+          "textTransform": "capitalize",
+        }
+      }>
+      Your lastname
+      :
+    </label>
+    <input
+      defaultValue=""
+      name="lastname"
+      type="text" />
+  </p>
+  <p>
+    <label
+      style={
+        Object {
+          "marginRight": 10,
+          "textTransform": "capitalize",
+        }
+      }>
+      Your email
+      :
+    </label>
+    <input
+      defaultValue=""
+      name="email"
+      type="text" />
+  </p>
+  <input
+    type="submit"
+    value="Submit" />
+</form>
+`;

@@ -1,0 +1,26 @@
+{
+  "name": "slider",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "enzyme": "^2.7.1",
+    "react-addons-test-utils": "^15.4.2",
+    "react-autobind": "^1.0.6",
+    "react-scripts": "0.9.0",
+    "react-test-renderer": "^15.4.2"
+  },
+  "dependencies": {
+    "material-ui": "^0.16.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -8,6 +8,7 @@ const ContactForm = ({ onSubmit }) => (
     <TextField title="Your email" field="email" />
 
     <input type="submit" value="Submit" />
+    <input type="reset" value="Clear" />
   </Form>
 )
 

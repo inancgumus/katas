@@ -53,5 +53,8 @@ exports[`undefined 1`] = `
   <input
     type="submit"
     value="Submit" />
+  <input
+    type="reset"
+    value="Clear" />
 </form>
 `;

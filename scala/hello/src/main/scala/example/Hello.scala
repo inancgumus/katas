@@ -6,7 +6,8 @@ object Hello {
     // TurkishDate.run
     // FunctionExample.run
     // TimerExample.run
-    ClassExample.run
+    // ClassExample.run
+    AlgebraSimplifyExample.run
   }
 }
 

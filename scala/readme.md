@@ -4,7 +4,7 @@
 
 I'm trying to learn Scala to refresh my existing (_and old_) Java knowledge. Because, I've been in the omniverse of node.js, es6, react, ruby and bunch of others. I last used Java in 2012 if I remember correctly. However, as I see, much of the ecosystem has not changed for me not to keep up with. It's not like Javascript universe (_which is changing daily_). I think, this is one of the benefits of an ancient ecosystem.
 
-I'm also want to learn Scala because I'm in the business of Big Data. However, I didn't use most of the big data tools in the Java community since 2012. So, there are Akka, Kafka, Spark etc. For example, actually, to use Kafka, I don't need to learn Skala. However, much of the ecosystem is revolving around these tools right now, as I see, so it's better to learn it from the roots. I think that will be good for me. I'm also curious about all of these.
+I also want to learn Scala because I'm in the business of Big Data. However, I hadn't used most of the big data tools in the Java community since 2012. So, there are Akka, Kafka, Spark etc. For example, actually, to use Kafka, I don't need to learn Skala. However, much of the ecosystem is revolving around these tools right now, as I see, so it's better to learn it from the roots. I think that will be good for me. I'm also curious about all of these.
 
 ### Why I choosed Scala?
 
@@ -34,11 +34,11 @@ object HelloThere {
 
 ### Singleton classy objectishes 
 
-When I define it like this, it becomes a singleton! Oh my. So, that means, this is a class and an object at the same. Actually, it'll become an object when it's first used. Good. Lazy-evaulation of functional languages.
+When I define it like this, it becomes a singleton! Oh my. So, that means, this is a class and an object at the same. Actually, it'll become an object until its first use. Good. Lazy-evaulation of functional languages.
 
 ### There are no static methods or fields
 
-That's cool. Because, the global data is usually not good. However, as you know, they're also practical. Especially for mother space-ship utility classes (_beware!_). 
+That's cool. Because, the global data is usually not good. However, as you know, it's also practical. Especially for the mother space-ship utility classes (_beware!_). 
 
 So, `main` method is defined on a singleton object. So, it's kind of static, however, on an instance, not on a class itself. Java coders know what I mean.
 
@@ -48,7 +48,7 @@ Oh my, my. Cool? Yes. It's slick. Like in the example, `def main(..)` is enough 
 
 ### Interfacing with Java
 
-`java.lang` package are imported automatically. So, I can its classes directly without importing.
+`java.lang` package are imported automatically. So, I can use its classes directly without importing.
 
 I can also import any Java package into Scala and use it.
 
@@ -64,7 +64,7 @@ Hello.run // <- no need for parentheses
 
 ### Space separated method calls
 
-Methods taking one argument can be used with space syntax instead of dot-notation. This is kind of smells like Clousure? Hmm?
+Methods taking one argument can be used with space syntax (_infix syntax to be formal_) instead of dot-notation. This is kind of smells like Clousure? Hmm?
 
 ```scala
 object TurkishDate {
@@ -91,7 +91,7 @@ So, for example, +, -, * operators are methods in number objects.
 
 ### Functions are objects and first-class citizens
 
-Any modern programming language without treating functions as first-class citizens is not cool anymore because functional programming is cool again after its long winter.
+Any modern programming language without treating functions as first-class citizens is not cool anymore because functional programming is cool again, after its long winter.
 
 So, functions can be passed to methods and stored in variables. No more need to define, _holder_ classes or interfaces just to define functions to pass to methods etc, as in Java.
 
@@ -159,3 +159,78 @@ As in the Complex class example code, the compiler guessing the return type of `
 ### var and val difference
 
 If I understand correctly until this moment by trial and error tactics, `var` is for declaring _mutable variables_ and, `val` is for declaring _immutable variables_. Mutable means, can be changed, immutable is the reverse, which  cannot be changed.
+
+### Pattern matching functions
+
+I can use simple pattern-matching functions instead of Java switch-case statements with `match` keyword.
+
+```scala
+// define a function named monthName which accepts one integer argument: i
+val monthName = (i: Int) => i match {
+  case 1  => "January"
+  case 2  => "February"
+  case 3  => "March"
+  case 4  => "April"
+  case 5  => "May"
+  case 6  => "June"
+  case 7  => "July"
+  case 8  => "August"
+  case 9  => "September"
+  case 10 => "October"
+  case 11 => "November"
+  case 12 => "December"
+  case _  => "Invalid month"  // the default, catch-all
+}
+```
+
+```scala
+monthName(1)  // January
+monthName(12) // December
+monthName(13) // Invalid month
+```
+
+### Case classes
+
+There are some differences from standard classes:
+
+* they can be created without a new keyword `CaseClass("something")` instead of `new CaseClass("something")`
+
+* getters automatically inferred from the constructor arguments. `case class hello(message: String)` and `hello("inanc").message // -> inanc`.
+
+* `equals` and `hashCode` added and they check the structure of the instances. `hello("inanc").hashCode == hello("inanc").hashCode`, and, `hello("inanc").equals(hello("inanc"))`
+
+* toString added which returns `hello("inanc").toString // hello(inanc)`
+
+* instances of case classes can easily be used in pattern matching
+
+```scala
+// pattern matching example
+
+// to accept same messagers 
+// in send function below
+abstract class Messager
+case class Hello(message: String) extends Messager
+case class Bye(message: String) extends Messager
+
+def send(messager: Messager): String = messager match {
+  // when the messager matches to Hello(message: String)
+  case Hello(message) => s"hey there $message!"
+  // when the messager matches to Bye(message: String)
+  case Bye(message) => s"goodbye $message!"
+}
+
+send(Hello("inanc"))  // hey there inanc!
+send(Bye("inanc"))    // goodbye inanc!
+```
+
+### Command output reuse in REPL
+
+In Scala REPL, I can even use my last commands' returns in a new command.
+
+```scala
+scala> 1
+res0: Int = 1
+
+scala> res0 + 1
+res1: Int = 2
+```

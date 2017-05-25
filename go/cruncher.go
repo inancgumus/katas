@@ -18,7 +18,7 @@ func gen(nums ...int) <-chan int {
 
 type cruncher func(int) int
 
-func sq(in <-chan int, f cruncher) <-chan int {
+func calc(in <-chan int, f cruncher) <-chan int {
 	out := make(chan int)
 	go func() {
 		for n := range in {
@@ -44,5 +44,5 @@ func main() {
 		return int(math.Sqrt(float64(n)))
 	}
 
-	printer(sq(sq(gen(1, 2, 3, 4, 5), sqf), sqrf))
+	printer(calc(calc(gen(1, 2, 3, 4, 5), sqf), sqrf))
 }
